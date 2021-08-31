@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from './types';
+import { INCREMENT, DECREMENT, TOGGLE_THEME } from './types';
 
 export const increment = () => {
   return {
@@ -17,5 +17,11 @@ export const asyncIncrement = () => {
     setTimeout(() => {
       dispatch(increment());
     }, 1000);
+  };
+};
+
+export const changeTheme = () => {
+  return {
+    type: TOGGLE_THEME,
   };
 };
